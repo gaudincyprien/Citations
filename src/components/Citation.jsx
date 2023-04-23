@@ -1,5 +1,6 @@
 import './citation.css';
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Citation extends  Component {
     state = {
@@ -21,35 +22,35 @@ class Citation extends  Component {
         this.citationKaamelott()
     }
     citationKaamelott() {
-        fetch('https://kaamelott.chaudie.re/api/random')
+        axios.get('https://kaamelott.chaudie.re/api/random')
         .then((response) => {
-            return response.json()
+            this.setState({ citation: response.data });
         })
-        .then((result)=>{
-            this.setState({ citation: result })
-        })
+        .catch((error) => {
+            console.log(error);
+        });
     }
     mesCitations() {
-        fetch('http://localhost:3000/citation')
-        .then((response) => {
-            return response.json()
-        })
+        axios.get('http://localhost:3000/citation')
         .then((result)=>{ 
             const resultat = {
-                status: 1,
+                status: result.data,
                 citation: {
-                  citation: result.citation,
+                  citation: result.data.citation,
                   infos: {
-                    auteur: result.auteur,
-                    acteur: result.acteur,
-                    personnage: result.personnage,
-                    saison: result.saison,
-                    episode: result.episode,
+                    auteur: result.data.auteur,
+                    acteur: result.data.acteur,
+                    personnage: result.data.personnage,
+                    saison: result.data.saison,
+                    episode: result.data.episode,
                   },
                 },
               };
             this.setState({ citation: resultat })
         })
+        .catch((error) => {
+            console.log(error);
+        });
     }
     render() {
         return (
