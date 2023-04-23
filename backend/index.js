@@ -56,6 +56,13 @@ app.delete('/supprimercitation/:id', function(req, res) {
         res.send(results);
     });
 });
+// Endpoint pour modifier une entrée de la table 'citation'
+app.put('/modifiercitation/:id', function(req, res) {
+    connection.query('UPDATE citation SET ? WHERE id = ?', [req.body, req.params.id], function(error, results, fields) {
+        if (error) throw error;
+        res.send(results);
+    });
+});
 
 // Lancement du serveur
 app.listen(3000, function() {

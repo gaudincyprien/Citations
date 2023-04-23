@@ -16,9 +16,11 @@
     height: 22.5px;
     margin-right: 1%;
 }
-.listimgListCitationupdate{
+.listbutListCitationupdate{
     display: flex;
     width: 22.5px;
     height: 22.5px;
     margin-right: 1%;
+    border: none;
+    background-color: #FFFFFF;
 }

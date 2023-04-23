@@ -1,6 +1,7 @@
 import './citation.css';
 import React, { Component } from 'react';
 import axios from 'axios';
+import { mesCitations } from './Mescitations';
 
 class Citation extends  Component {
     state = {
@@ -19,7 +20,6 @@ class Citation extends  Component {
         }
     }
     componentDidMount() {
-        console.log("componentDidMount")
         this.citationKaamelott()
     }
     citationKaamelott() {
@@ -61,6 +61,9 @@ class Citation extends  Component {
             personnage: this.state.citation.citation.infos.personnage,
             saison: this.state.citation.citation.infos.saison,
             episode: this.state.citation.citation.infos.episode,
+        })
+        .then((result)=>{
+            mesCitations()
         })
         .catch((error) => {
             console.log(error);

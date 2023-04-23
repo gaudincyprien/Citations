@@ -27,7 +27,6 @@ class Mescitations extends Component {
       episode: episode.value
     })
     .then((result)=>{
-      console.log("Citation ajoutée")
       this.mesCitations()
     })
     .catch((error) => {
@@ -62,8 +61,7 @@ class Mescitations extends Component {
     return (
       <div>
         <p id='mescitations'>Mes citations</p>
-        <div>
-            
+        <div>  
             <Button id='ajout' variant="primary" onClick={this.handlePopupOpen}>+ Ajout d'une citation</Button>
             <Modal show={this.state.showPopup} onHide={this.handlePopupClose}>
               <Modal.Header>
@@ -98,4 +96,5 @@ class Mescitations extends Component {
     );
   }
 }
+export const mesCitations = Mescitations.prototype.mesCitations;
 export default Mescitations;
