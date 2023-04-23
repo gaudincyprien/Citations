@@ -1,0 +1,55 @@
+#citation{
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 5px solid #6203AD;
+    border-radius: 30px;
+    padding: 5px;
+}
+#titre{
+    font-size: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #6203AD;
+}
+#auteur{
+    margin-right: 5%;
+    font-size: 22px;
+    font-family: 'Inter';
+    font-style: italic;
+    color: #6203AD;
+    text-align: right;
+}
+#favoris{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#favorisimage{
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-right: 1%;
+}
+#favoristext{
+    display: flex;
+    font-size: 21px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #6203AD;
+    text-decoration: underline;
+}
+#autrecitation{
+    font-size: 25px;
+    font-family: 'Inter';
+    color: #07002E;
+}
+img{
+    width: 30px;
+    height: 20px;
+}
+.citation{
+    color: #6203AD;
+    font-size: 21px;
+    font-family: 'Inter';
+    margin-left: 1%;
+}

@@ -1,0 +1,32 @@
+#mescitations{
+    font-family: 'Inter';
+    font-size: 40px;
+    color: #070707;
+}
+#ajout{
+    border: 1px solid #6203AD;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #6203AD;
+    color: #FFFFFF;
+    width: 13%;
+    margin-right: 1%;
+}
+#rechercher{
+    border: 3px solid #6203AD;
+    border-radius: 15px;
+    padding: 10px;
+    color: #6203AD;
+    width: 50%;
+}
+
+
+#citationss{
+    border: 1px solid #6203AD;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: #6203AD;
+    width: 100%;
+    margin-bottom: 1%;
+}
