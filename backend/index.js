@@ -16,7 +16,7 @@ app.use(cors({
   
 // Autoriser les requêtes provenant de tous les domaines, mais seulement les méthodes GET et POST
 app.use(cors({
-    methods: ['GET', 'POST']
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
   }));
 
 // Configuration de la connexion à la base de données
@@ -45,6 +45,13 @@ app.get('/citations', function(req, res) {
 // Endpoint pour insérer une nouvelle entrée dans la table 'citation'
 app.post('/ajoutcitation', function(req, res) {
     connection.query('INSERT INTO citation SET ?', req.body, function(error, results, fields) {
+        if (error) throw error;
+        res.send(results);
+    });
+});
+// Endpoint pour supprimer une entrée de la table 'citation'
+app.delete('/supprimercitation/:id', function(req, res) {
+    connection.query('DELETE FROM citation WHERE id = ?', req.params.id, function(error, results, fields) {
         if (error) throw error;
         res.send(results);
     });

@@ -19,7 +19,6 @@ class Citation extends  Component {
         }
     }
     componentDidMount() {
-        console.log('componentDidMount');
         this.citationKaamelott()
     }
     citationKaamelott() {
