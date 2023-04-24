@@ -1,6 +1,6 @@
 ## Ajouter une extension Chrome
 
-afin de pourvoir faire des requestes vers les API, il faut installer l'extensions suivante Allow CORS disponible sur google Chrome avec le lien suivant : 
+Afin de pourvoir faire des requestes vers les API, il faut installer l'extensions suivante Allow CORS disponible sur google Chrome avec le lien suivant : 
 
 [https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr)
 
@@ -15,7 +15,7 @@ Ensuite il faut lancer le serveur de base de données qui se trouve dans le doss
 
 ### `node backend/index.js`
 
-Cette commande permet de lancer la création de la base de données ainsi que l'API. 
+Cette commande permet de lancer la création de la table citations dans la base de données citations ainsi que l'API. 
 Il faut attendre que la console affiche "Serveur démarré sur le port 3000"
 Ensuite on peut lancer l'application react depuis un autre terminal avec la commande suivante : 
 
