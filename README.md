@@ -21,5 +21,5 @@ Ensuite on peut lancer l'application react depuis un autre terminal avec la comm
 
 ### `npm start`
 
-La console nous demande nous indique que le port 3000 est déjà utilisé. Il vous appuyé sur la touche y pour l'application se lance sur le port 3001. 
+La console nous demande nous indique que le port 3000 est déjà utilisé. Il vous appuyé sur la touche y pour lancer l'application se lance sur le port 3001. 
 Ouvrir [http://localhost:3001](http://localhost:3001) afin de visualiser l'application
